@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <audio id="audio-fundo-menu" loop>
+        <source src="audio/menu.mp3" type="audio/mpeg">
+      </audio>
+      <script>
+        const audioFundoMenu = document.getElementById('audio-fundo-menu');
+        audioFundoMenu.play(); // Para iniciar a reprodução da música de fundo do menu
+      </script>
+
+    <audio id="audio-fundo" loop>
+        <source src="audios/arcade.mp3" type="audio/mpeg">
+        
+      </audio>
+      <script>
+        const audioFundo = document.getElementById('audio-fundo');
+        audioFundo.play(); // Para iniciar a reprodução do áudio de fundo
+      </script>
+
+   
+    <script>
+        const audioGameOver = document.getElementById('audio-game-over');
+        audioGameOver.play(); // Para reproduzir o áudio de game over
+    </script>
+
+     <audio id="audio-atirar">
+        <source src="audio/tiro.mp3" type="audio/mpeg">
+      </audio>
+      <script>
+        const audioAtirar = document.getElementById('audio-atirar');
+        audioAtirar.play(); // Para reproduzir o áudio ao atirar
+      </script>
+
+    <audio id="audio-start">
+        <source src="audio/game-start.mp3" type="audio/mpeg">
+    </audio>
+    <script>
+        const audioStart = document.getElementById('audio-start');
+        audioStart.play(); // Para reproduzir o áudio de start
+    </script>
+
+</body>
+</html>
+
+<html>
+<head>
+  <title>Game Over</title>
+  <style>
+    #videoBackground {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+    /* Estilos para a tela de game over */
+    body {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      margin-top: 200px;
+    }
+
+    h1 {
+      font-size: 48px;
+    }
+    p {
+      font-size: 24px;
+    }
+    button {
+      font-size: 24px;
+      padding: 10px 20px;
+      background-color: purple;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      margin-top: 150px;
+      border-radius: 30px;
+      box-shadow: 50px black;
+    }
+  </style>
+</head>
+<body>
+    <video id="videoBackground" autoplay loop muted>
+        <source src="video_background.mp4" type="video/mp4">
+      </video>
+  
+  <button id="restartButton">Reiniciar</button>
+
+  <!-- Elemento de áudio para reproduzir o som de game over -->
+  <audio id="audio-game-over">
+    <source src="audio/game-over.mp3" type="audio/mpeg"> 
+</audio>
+
+  <script>
+    // Função para reiniciar o jogo quando o botão é clicado
+    function reiniciarJogo() {
+      // Reproduzir o som de game over
+      var gameOverAudio = document.getElementById('audio-game-over');
+      gameOverAudio.play();
+
+      // Coloque o código para reiniciar o jogo aqui
+      console.log('O jogo foi reiniciado.');
+    }
+
+    // Adicionar um ouvinte de evento para o botão
+    document.getElementById('restartButton').addEventListener('click', reiniciarJogo);
+  </script>
+</body>
+</html>
+          
+</body>
+</html>
